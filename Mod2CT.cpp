@@ -4,41 +4,36 @@
  *  Created on: Jul 23, 2024
  *      Author: robwilliams
  */
-
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
-    // Variables to store the input strings
-    string input1;
-    string input2;
-    string combinedInput;
+    std::string name1, name2, name3, conc_name;
 
+    // Loop to take input three times
+    std::cout << "Make  Band Name \n";
 
-
-    // Loop to take input and display concatenated strings three times
     for (int i = 1; i <= 3; ++i) {
-    	cout << "Name your Band: ";
-        // Take the first string input from the user
-        cout << "Adjective: ";
-        getline(cin, input1);
-        input1[0] = toupper(input1[0]);
+        std::cout << "Band Name " << i << ":\n";
 
-        // Take the second string input from the user
-        cout << "Favorite fruit ( plural ): ";
-        getline(cin, input2);
-        input2[0] = toupper(input2[0]);
+        // Take first string input
+        std::cout << "Enter the first adjective: ";
+        std::getline(std::cin, name1);
 
-        // Concatenate the two strings
-        combinedInput = input1 + input2;
+        // Take second string input
+        std::cout << "Enter the Fruit name(plural): ";
+        std::getline(std::cin, name2);
 
-        // Print the concatenated string
-        cout << "Band Name: The " << combinedInput << endl;
+        // Concatenate the strings
+        conc_name = name1 + name2;
 
+        if (!conc_name.empty()) {
+                    conc_name[0] = std::toupper(conc_name[0]);
+                }
+
+        // Display the result
+        std::cout << "Band Name: The " << conc_name << "\n\n";
+    }
 
     return 0;
 }
-}
-s
